@@ -1,0 +1,4 @@
+CVE-2020-14382-1.patch
+CVE-2020-14382-2.patch
+CVE-2020-14382-3.patch
+decrease_memlock_ulimit.patch
