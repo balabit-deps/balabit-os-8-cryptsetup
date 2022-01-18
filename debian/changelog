@@ -1,3 +1,16 @@
+cryptsetup (2:2.2.2-3ubuntu2.4) focal-security; urgency=medium
+
+  * SECURITY UPDATE: decryption through LUKS2 reencryption crash recovery
+    - debian/patches/CVE-2021-4122.patch: add disable-luks2 reencryption
+      configure option in configure.ac, lib/luks2/luks2_keyslot.c,
+      lib/luks2/luks2_reencrypt.c, lib/setup.c, tests/api-test-2.c,
+      tests/luks2-reencryption-test.
+    - debian/rules: Disable LUKS2 reencryption by adding new
+      --disable-luks2-reencryption build option.
+    - CVE-2021-4122
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 18 Jan 2022 12:36:47 -0500
+
 cryptsetup (2:2.2.2-3ubuntu2.3) focal; urgency=medium
 
   * Introduce retry logic for external invocations after mdadm (LP: #1879980)
