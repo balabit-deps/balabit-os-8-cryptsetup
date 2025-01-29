@@ -1,3 +1,17 @@
+cryptsetup (2:2.2.2-3ubuntu2.5) focal; urgency=medium
+
+  [ Chengen Du ]
+  * Refine proc mounts entries traversal (LP: #2054390)
+    - d/i/h/cryptroot: Backport upstream commit 95fd4be9b4c6: d/functions:
+      get_mnt_devno(): Speed up execution time on large /proc/mounts.
+
+  [ Heitor Alves de Siqueira ]
+  * Ignore ZFS entries that don't have major/minor (LP: #1830110):
+    - d/i/h/cryptroot: add $fstype check for zfs in get_mnt_devno(), add
+      checks for $devnos in generate_initrd_crypttab()
+
+ -- Heitor Alves de Siqueira <halves@canonical.com>  Wed, 29 Jan 2025 18:37:57 +0000
+
 cryptsetup (2:2.2.2-3ubuntu2.4) focal-security; urgency=medium
 
   * SECURITY UPDATE: decryption through LUKS2 reencryption crash recovery
